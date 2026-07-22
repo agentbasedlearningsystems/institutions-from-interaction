@@ -356,3 +356,29 @@ headroom remained.
 **Speed.** The reported structures are visible within the first
 three hundred iterations (wall-clock hours) at settlement rates of
 1.2 to 1.4 per iteration.
+
+## Table A8: Converged-state census (July 22 afternoon; her convergence ruling)
+
+Window: each society's last 100 settled deliveries (the converged
+standing state). Societies with a full or near-full window (>= 50
+recent deliveries), every one dividing:
+
+| society | trades | learners | evenness | window |
+|---|---|---|---|---|
+| basic_seed220 | 19 | 22 | 0.99 | 100 |
+| basic_seed227 | 18 | 23 | 0.98 | 100 |
+| basic_seed230 | 17 | 20 | 0.98 | 100 |
+| alwayson_seed212 | 17 | 22 | 0.98 | 63 |
+| basic_seed222 | 17 | 22 | 0.98 | 92 |
+| alwayson_seed210 | 15 | 21 | 0.98 | 100 |
+| basic_seed219 | 15 | 23 | 0.92 | 100 |
+| basic_seed229 | 15 | 21 | 0.97 | 100 |
+| basic_seed223 | 15 | 21 | 0.97 | 100 |
+| basic_seed228 | 14 | 20 | 0.97 | 100 |
+| basic_seed231 | 14 | 18 | 0.98 | 100 |
+| basic_seed224 | 13 | 22 | 0.95 | 100 |
+
+Converged junk (same window, 25 societies measured): entry-tier
+median 6.5% of settlements, upper tiers median 0%. The remaining
+societies' converged windows are still filling; instrument:
+`instruments/converged_division.py`, `instruments/converged_junk.py`.
