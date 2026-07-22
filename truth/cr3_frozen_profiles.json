@@ -1,0 +1,32 @@
+{
+ "n_iter": 5,
+ "counting": "tools-only (Debbie 7/20)",
+ "source_X_bigtree_basic_seed227": {
+  "t_max": 797,
+  "t_cut": 792,
+  "n_deliveries": 19,
+  "counts": {
+   "vectorSpace_sklearn_MinMaxScaler": 2,
+   "vectorSpace_sklearn_PCAC100": 4,
+   "vectorSpace_sklearn_FastICA": 5,
+   "vectorSpace_sklearn_NystroemC100": 2,
+   "vectorSpace_sklearn_LocallyLinearEmbeddingC50": 1,
+   "preprocessor_freetext_strip": 1,
+   "vectorSpace_sklearn_SparsePCA": 5
+  }
+ },
+ "source_Y_bigtree_alwayson_seed211": {
+  "t_max": 45,
+  "t_cut": 40,
+  "n_deliveries": 8,
+  "counts": {
+   "vectorSpace_sklearn_MiniBatchSparsePCA": 2,
+   "vectorSpace_sklearn_SkewedChi2Sampler": 1,
+   "vectorSpace_sklearn_MiniBatchNMF": 1,
+   "vectorSpace_sklearn_FactorAnalysis": 3,
+   "classifier_sklearn_RidgeClassifier": 1,
+   "labeler_disasterTweets": 1,
+   "vectorSpace_sklearn_LocallyLinearEmbeddingC50": 1
+  }
+ }
+}

@@ -1,0 +1,5380 @@
+{
+ "parameters": {
+  "label": "bigtree_alwayson_seed211",
+  "output_path": "experiments/bigtree_alwayson_seed211/",
+  "sign_size": 8,
+  "num_trade_plans": 10,
+  "item_size": 8,
+  "num_tests": 5,
+  "min_token_price": 1,
+  "max_token_price": 100,
+  "max_iterations": 100000,
+  "chance_of_stop_codon": 0.1,
+  "seed": 211,
+  "stochastic_copies": 1,
+  "recursive_trade_depth_limit": 10,
+  "buyers_weight": 0.5,
+  "agent_parameters": {
+   "SISTER": {
+    "sigma": 0.4,
+    "elitist": false,
+    "fitness_weights": {
+     "agi_tokens": 1,
+     "buyer_score": 150,
+     "seller_score": 100
+    },
+    "birth_bias_types": [
+     "sell",
+     "construct",
+     "construct",
+     "buy",
+     "buy"
+    ]
+   },
+   "Exogenous": {}
+  },
+  "random_agents": {
+   "SISTER": 24
+  },
+  "blackboard_agents": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "context_keyed_stochastic": true,
+  "poor_default_resolution": false,
+  "seed_provenance": {
+   "description": "Lazy catalog weights: conditional probabilities at every level. Package nodes proportional to 30-day PyPI download counts; a package absent from the census gets the minimum present count (66310); classes uniform within a package; every level normalized. Family nodes keep the sibling convention weight 0.3, so the top level is uniform across the eight families. The previous v0 pypistats provenance applied to the replaced hand-written tool leaves and lives in git history.",
+   "census": "./namespace_tree/top_pypi_30d.json",
+   "census_last_update": "2026-07-01 06:34:06",
+   "downloads_used": {
+    "hdbscan": 3111728,
+    "lightgbm": 21837330,
+    "scikit-learn": 219573429,
+    "umap-learn": 6809550,
+    "xgboost": 47766503
+   }
+  },
+  "seed_idioms": [],
+  "payment_ledger": true
+ },
+ "blackboard": [
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (disasterTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.686,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (movieSentiment)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.337,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (movieSentimentFewshot)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_movieSentimentFewshot",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.568,
+     "budget": 14
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (politicalAds)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_politicalAds",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.512,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (congressionalBills)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.396,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (iraVsControl)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_iraVsControl",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.883,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (BSdetector)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_BSdetector",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.856,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby: Embedding-Buyer (politicalTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_politicalTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.795,
+     "budget": 12
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (disasterTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.408,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (movieSentiment)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.493,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (movieSentimentFewshot)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_movieSentimentFewshot",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.441,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (politicalAds)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_politicalAds",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.657,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (congressionalBills)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.447,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (iraVsControl)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_iraVsControl",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.372,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (BSdetector)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_BSdetector",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.638,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Clustering-Buyer (politicalTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_silhouette",
+       "data": "data_freetext_politicalTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.805,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (disasterTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.805,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (movieSentiment)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.332,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (movieSentimentFewshot)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_movieSentimentFewshot",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.521,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (politicalAds)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_politicalAds",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.547,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (congressionalBills)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.86,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (iraVsControl)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_iraVsControl",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.767,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (BSdetector)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_BSdetector",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.693,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Baby+1: Anomaly-Buyer (politicalTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_politicalTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.78,
+     "budget": 18
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Middle: Classifier-Buyer (disasterTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.768,
+     "budget": 45
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Middle: Classifier-Buyer (movieSentiment)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.7,
+     "budget": 55
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Middle: Ideology-Clustering-Buyer (bills x AMI)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_ideologyAMI",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.729,
+     "budget": 40
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Middle: Influence-Op-Buyer (IRA x mutual information)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_iraMutualInfo",
+       "data": "data_freetext_iraVsControl",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.716,
+     "budget": 40
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Combination: Full-Pipeline-Buyer (disasterTweets)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.489,
+     "budget": 80
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Combination: Full-Pipeline-Buyer (movieSentiment)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.549,
+     "budget": 85
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Combination: Cluster-Pipeline-Buyer (bills)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "clusterer_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_clusterer_ideologyAMI",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.877,
+     "budget": 55
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Doc-Embedding-Seeking Human (want doc_embedding: sentiment corpus x fixed logistic probe, COMPONENT demand)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_probe",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.464,
+     "budget": 45
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Sentiment-Ensemble-Seeking Human (want sentiment_ensemble: ensemble of >=2 learner families x F1 on the LLM test split)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_ensemble_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.368,
+     "budget": 70
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Fewshot-Sentiment-Seeking Human (want sentiment_fewshot: 500 labeled rows x F1 on the LLM test split, aspirational)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_movieSentimentFewshot",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.568,
+     "budget": 80
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Reuse: Retrieval-Buyer (movieSentiment)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "nearestNeighbors_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_nearestNeighbors_relevance",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.767,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Reuse: Retrieval-Buyer (politicalAds)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "nearestNeighbors_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_nearestNeighbors_relevance",
+       "data": "data_freetext_politicalAds",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.388,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Reuse: Retrieval-Buyer (congressionalBills)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "nearestNeighbors_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_nearestNeighbors_relevance",
+       "data": "data_freetext_congressionalBills",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.336,
+     "budget": 26
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Wave1: Dedup-Buyer (movieSentiment) \u2014 end task, almost pure cleaning",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_dedupRecovery",
+       "data": "data_freetext_movieSentimentDedup",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.467,
+     "budget": 22
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Wave1: Dedup-Buyer (politicalAds)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_dedupRecovery",
+       "data": "data_freetext_politicalAdsDedup",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.343,
+     "budget": 22
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Wave1: Dedup-Buyer (congressionalBills)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "vectorSpace_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_vectorSpace_dedupRecovery",
+       "data": "data_freetext_congressionalBillsDedup",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.433,
+     "budget": 22
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Wave2 (gated on 40 embedding-family settles): Bot-Detector-Buyer (IRA)",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "anomalyDetector_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_anomalyDetector_centerRank",
+       "data": "data_freetext_iraVsControl",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.449,
+     "budget": 45
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  },
+  {
+   "type": "SISTER",
+   "distributes": true,
+   "label": "Wave3 (gated on 12 classifier settles): Cross-Corpus-Buyer",
+   "trades": [
+    {
+     "type": "buy",
+     "item": "classifier_stop",
+     "tests": [
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_movieSentiment",
+       "hidden": false
+      },
+      {
+       "stophere": false,
+       "test": "test_classifier_f1heldout",
+       "data": "data_freetext_disasterTweets",
+       "hidden": false
+      },
+      {
+       "stophere": true
+      }
+     ],
+     "alpha": 0.363,
+     "budget": 130
+    },
+    {
+     "type": "stop"
+    }
+   ]
+  }
+ ],
+ "ontology": {
+  "test": {
+   "_weight": 0.3,
+   "_deterministic": true,
+   "_args": [
+    {
+     "type": "tuple",
+     "dtype": "(float32,int32)"
+    }
+   ],
+   "clusterer": {
+    "_args": [
+     {
+      "type": "tuple",
+      "dtype": "(float32,int32)"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "silhouette": {
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_clusterer_silhouette",
+     "_kwargs": {
+      "time": {
+       "type": "float32"
+      }
+     },
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ]
+    },
+    "ideologyAMI": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_clusterer_ideologyAMI"
+    },
+    "iraMutualInfo": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_clusterer_iraMutualInfo"
+    }
+   },
+   "anomalyDetector": {
+    "_weight": 0.3,
+    "centerRank": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,float32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_anomalyDetector_centerRank"
+    }
+   },
+   "classifier": {
+    "_weight": 0.3,
+    "heldout": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_classifier_heldout"
+    },
+    "f1heldout": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_classifier_f1heldout",
+     "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+    }
+   },
+   "nearestNeighbors": {
+    "_weight": 0.3,
+    "relevance": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_nearestNeighbors_relevance",
+     "_kwarg_vals": {},
+     "_kwargs": {}
+    }
+   },
+   "vectorSpace": {
+    "_weight": 0.3,
+    "probe": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "float"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "test_vectorSpace_probe",
+     "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+    }
+   }
+  },
+  "data": {
+   "_args": [],
+   "_weight": 0.3,
+   "_deterministic": true,
+   "vector": {
+    "_args": [],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "blobs": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_vector_blobs",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "moons": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_vector_moons",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "circles": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_vector_circles",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "ansio": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_vector_ansio",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "varied": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_vector_varied",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    }
+   },
+   "freetext": {
+    "_args": [],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "internetResearchAgencyTweets": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_internetResearchAgencyTweets",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "internetResearchAgencyFacebook": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_internetResearchAgencyFacebook",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "trumpTweets": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_trumpTweets",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "BSdetector": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_BSdetector",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "politicalAds": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_politicalAds",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "short": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_short",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "politicalTweetsShort": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_politicalTweetsShort",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "congressionalBills": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_congressionalBills",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "iraVsControl": {
+     "_args": [],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_iraVsControl",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "disasterTweets": {
+     "_args": [],
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_disasterTweets",
+     "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+    },
+    "movieSentiment": {
+     "_args": [],
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_movieSentiment",
+     "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+    },
+    "movieSentimentFewshot": {
+     "_args": [],
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "data_freetext_movieSentimentFewshot",
+     "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+    }
+   }
+  },
+  "preprocessor": {
+   "_args": [
+    {
+     "type": "list",
+     "dtype": "str"
+    }
+   ],
+   "_weight": 0.3,
+   "_deterministic": true,
+   "freetext": {
+    "_args": [
+     {
+      "type": "list",
+      "dtype": "str"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "lemmatization": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "preprocessor_freetext_lemmatization",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "strip": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "preprocessor_freetext_strip",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "tag": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "preprocessor_freetext_tag",
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ]
+    },
+    "stopwords": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "preprocessor_freetext_stopwords"
+    }
+   }
+  },
+  "clusterer": {
+   "_weight": 0.3,
+   "_deterministic": true,
+   "hdbscan": {
+    "_weight": 0.013973665968226162,
+    "_deterministic": true,
+    "_seed_provenance": "package share 3111728 of 222685157 30-day downloads (census project hdbscan)",
+    "HDBSCAN": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.5,
+     "_deterministic": true,
+     "_comment": "clusterer_hdbscan_HDBSCAN",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RobustSingleLinkage": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.5,
+     "_deterministic": true,
+     "_comment": "clusterer_hdbscan_RobustSingleLinkage",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    }
+   },
+   "sklearn": {
+    "_weight": 0.9860263340317739,
+    "_deterministic": true,
+    "_seed_provenance": "package share 219573429 of 222685157 30-day downloads (census project scikit-learn)",
+    "AffinityPropagation": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.09090909090909091,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_AffinityPropagation",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "AgglomerativeClustering": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_AgglomerativeClustering",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "nclusters2": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_AgglomerativeClustering_nclusters2",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters8": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_AgglomerativeClustering_nclusters8",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters20": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_AgglomerativeClustering_nclusters20",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters50": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_AgglomerativeClustering_nclusters50",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "Birch": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_Birch",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "nclusters2": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_Birch_nclusters2",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters8": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_Birch_nclusters8",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters20": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_Birch_nclusters20",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters50": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_Birch_nclusters50",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "BisectingKMeans": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BisectingKMeans",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "DBSCAN": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.09090909090909091,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_DBSCAN",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "HDBSCAN": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_HDBSCAN",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KMeans": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_KMeans",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "nclusters2": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_KMeans_nclusters2",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true,
+      "ninit3": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters2_ninit3",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      },
+      "ninit10": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters2_ninit10",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      }
+     },
+     "nclusters8": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_KMeans_nclusters8",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true,
+      "ninit3": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters8_ninit3",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      },
+      "ninit10": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters8_ninit10",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      }
+     },
+     "nclusters20": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_KMeans_nclusters20",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true,
+      "ninit3": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters20_ninit3",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      },
+      "ninit10": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters20_ninit10",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      }
+     },
+     "nclusters50": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_KMeans_nclusters50",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true,
+      "ninit3": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters50_ninit3",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      },
+      "ninit10": {
+       "_weight": 0.5,
+       "_comment": "clusterer_sklearn_KMeans_nclusters50_ninit10",
+       "_args": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "float32"
+        }
+       ],
+       "_return": [
+        {
+         "type": "numpy.ndarray",
+         "dtype": "int32"
+        }
+       ],
+       "_deterministic": true
+      }
+     }
+    },
+    "MeanShift": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.09090909090909091,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_MeanShift",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MiniBatchKMeans": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_MiniBatchKMeans",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "nclusters2": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_MiniBatchKMeans_nclusters2",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters8": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_MiniBatchKMeans_nclusters8",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters20": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_MiniBatchKMeans_nclusters20",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "nclusters50": {
+      "_weight": 0.25,
+      "_comment": "clusterer_sklearn_MiniBatchKMeans_nclusters50",
+      "_args": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "int32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "OPTICS": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.09090909090909091,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_OPTICS",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "SpectralClustering": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.09090909090909091,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_SpectralClustering",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KMeansK2": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_KMeansK2",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KMeansK8": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_KMeansK8",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KMeansK20": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_KMeansK20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KMeansK50": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_KMeansK50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "MiniBatchKMeansK2": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_MiniBatchKMeansK2",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "MiniBatchKMeansK8": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_MiniBatchKMeansK8",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "MiniBatchKMeansK20": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_MiniBatchKMeansK20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "MiniBatchKMeansK50": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.018182,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_MiniBatchKMeansK50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "AgglomerativeClusteringK8": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_AgglomerativeClusteringK8",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "AgglomerativeClusteringK20": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_AgglomerativeClusteringK20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "AgglomerativeClusteringK50": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_AgglomerativeClusteringK50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "BirchK8": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BirchK8",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "BirchK20": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BirchK20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "BirchK50": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BirchK50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "BisectingKMeansK8": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BisectingKMeansK8",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "BisectingKMeansK20": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BisectingKMeansK20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "BisectingKMeansK50": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_BisectingKMeansK50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "HDBSCANM5": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_HDBSCANM5",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "HDBSCANM10": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_HDBSCANM10",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "HDBSCANM25": {
+     "_args": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "int32"
+      }
+     ],
+     "_weight": 0.022727,
+     "_deterministic": true,
+     "_comment": "clusterer_sklearn_HDBSCANM25",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    }
+   }
+  },
+  "vectorSpace": {
+   "_weight": 0.3,
+   "_deterministic": true,
+   "sklearn": {
+    "_weight": 0.9699202209014133,
+    "_deterministic": true,
+    "_seed_provenance": "package share 219573429 of 226382979 30-day downloads (census project scikit-learn)",
+    "DictionaryLearning": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_DictionaryLearning",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "comp50": {
+      "_weight": 0.5,
+      "_comment": "vectorSpace_sklearn_DictionaryLearning_comp50",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp100": {
+      "_weight": 0.5,
+      "_comment": "vectorSpace_sklearn_DictionaryLearning_comp100",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "FactorAnalysis": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_FactorAnalysis",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "FastICA": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_FastICA",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "IncrementalPCA": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_IncrementalPCA",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KernelPCA": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KernelPCA",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "LatentDirichletAllocation": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_LatentDirichletAllocation",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "comp20": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_LatentDirichletAllocation_comp20",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp100": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_LatentDirichletAllocation_comp100",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp300": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_LatentDirichletAllocation_comp300",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "MiniBatchDictionaryLearning": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_MiniBatchDictionaryLearning",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MiniBatchNMF": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_MiniBatchNMF",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MiniBatchSparsePCA": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_MiniBatchSparsePCA",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "NMF": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_NMF",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "comp20": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_NMF_comp20",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp100": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_NMF_comp100",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp300": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_NMF_comp300",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "PCA": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_PCA",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "comp20": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_PCA_comp20",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp100": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_PCA_comp100",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp300": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_PCA_comp300",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "SparsePCA": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_SparsePCA",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "TruncatedSVD": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_TruncatedSVD",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "comp20": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_TruncatedSVD_comp20",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp100": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_TruncatedSVD_comp100",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp300": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_TruncatedSVD_comp300",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "RandomTreesEmbedding": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_RandomTreesEmbedding",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "TfidfTransformer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_TfidfTransformer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "VarianceThreshold": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_VarianceThreshold",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KNNImputer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KNNImputer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "SimpleImputer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_SimpleImputer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "AdditiveChi2Sampler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_AdditiveChi2Sampler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "Nystroem": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_Nystroem",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "comp20": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_Nystroem_comp20",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp100": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_Nystroem_comp100",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     },
+     "comp300": {
+      "_weight": 0.333333,
+      "_comment": "vectorSpace_sklearn_Nystroem_comp300",
+      "_args": [
+       {
+        "type": "list",
+        "dtype": "str"
+       }
+      ],
+      "_return": [
+       {
+        "type": "numpy.ndarray",
+        "dtype": "float32"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "PolynomialCountSketch": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_PolynomialCountSketch",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RBFSampler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_RBFSampler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "SkewedChi2Sampler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_SkewedChi2Sampler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "Isomap": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_Isomap",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "LocallyLinearEmbedding": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_LocallyLinearEmbedding",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "TSNE": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_TSNE",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KNeighborsTransformer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KNeighborsTransformer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RadiusNeighborsTransformer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_RadiusNeighborsTransformer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "BernoulliRBM": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_BernoulliRBM",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "Binarizer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_Binarizer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "FunctionTransformer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_FunctionTransformer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KBinsDiscretizer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KBinsDiscretizer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MaxAbsScaler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_MaxAbsScaler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MinMaxScaler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_MinMaxScaler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "Normalizer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_Normalizer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "OrdinalEncoder": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_OrdinalEncoder",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "PowerTransformer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_PowerTransformer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "QuantileTransformer": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_QuantileTransformer",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RobustScaler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_RobustScaler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "StandardScaler": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.025,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_StandardScaler",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KMeansFeatures": {
+     "_weight": 0.025
+    },
+    "MiniBatchKMeansFeatures": {
+     "_weight": 0.025
+    },
+    "BisectingKMeansFeatures": {
+     "_weight": 0.025
+    },
+    "BirchFeatures": {
+     "_weight": 0.025
+    },
+    "TruncatedSVDC20": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_TruncatedSVDC20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "TruncatedSVDC100": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_TruncatedSVDC100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "TruncatedSVDC300": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_TruncatedSVDC300",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "PCAC20": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_PCAC20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "PCAC100": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_PCAC100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "PCAC300": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_PCAC300",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "DictionaryLearningC50": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_DictionaryLearningC50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "DictionaryLearningC100": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_DictionaryLearningC100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "DictionaryLearningC200": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_DictionaryLearningC200",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LatentDirichletAllocationT20": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_LatentDirichletAllocationT20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LatentDirichletAllocationT100": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_LatentDirichletAllocationT100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "NystroemC100": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_NystroemC100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "NystroemC300": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_NystroemC300",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "RBFSamplerC100": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_RBFSamplerC100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "RBFSamplerC300": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_RBFSamplerC300",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "IsomapC20": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_IsomapC20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "IsomapC50": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_IsomapC50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LocallyLinearEmbeddingC20": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_LocallyLinearEmbeddingC20",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LocallyLinearEmbeddingC50": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.008333,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_LocallyLinearEmbeddingC50",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KNeighborsTransformerN5": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KNeighborsTransformerN5",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KNeighborsTransformerN10": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KNeighborsTransformerN10",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KNeighborsTransformerN25": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 0.00625,
+     "_deterministic": true,
+     "_comment": "vectorSpace_sklearn_KNeighborsTransformerN25",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    }
+   },
+   "umap": {
+    "_weight": 0.030079779098586737,
+    "_deterministic": true,
+    "_seed_provenance": "package share 6809550 of 226382979 30-day downloads (census project umap-learn)",
+    "UMAP": {
+     "_args": [
+      {
+       "type": "list",
+       "dtype": "str"
+      }
+     ],
+     "_return": [
+      {
+       "type": "numpy.ndarray",
+       "dtype": "float32"
+      }
+     ],
+     "_weight": 1.0,
+     "_deterministic": true,
+     "_comment": "vectorSpace_umap_UMAP",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    }
+   }
+  },
+  "classifier": {
+   "_weight": 0.3,
+   "_deterministic": true,
+   "ensemble": {
+    "_weight": 0.00022925315000604405,
+    "vote": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      },
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.3,
+     "_deterministic": true,
+     "_comment": "classifier_ensemble_vote",
+     "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+    },
+    "_seed_provenance": "retained from the source scenario (the classifier_ensemble want path); weighted as a census-absent package at the minimum present count"
+   },
+   "lightgbm": {
+    "_weight": 0.07549806500107806,
+    "_deterministic": true,
+    "_seed_provenance": "package share 21837330 of 289243572 30-day downloads (census project lightgbm)",
+    "LGBMClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 1.0,
+     "_deterministic": true,
+     "_comment": "classifier_lightgbm_LGBMClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    }
+   },
+   "sklearn": {
+    "_weight": 0.7591298485278006,
+    "_deterministic": true,
+    "_seed_provenance": "package share 219573429 of 289243572 30-day downloads (census project scikit-learn)",
+    "CalibratedClassifierCV": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_CalibratedClassifierCV",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "LinearDiscriminantAnalysis": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LinearDiscriminantAnalysis",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "DummyClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_DummyClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "AdaBoostClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_AdaBoostClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "BaggingClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_BaggingClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "ExtraTreesClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_ExtraTreesClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "GradientBoostingClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_GradientBoostingClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "HistGradientBoostingClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_HistGradientBoostingClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RandomForestClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_RandomForestClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "trees100": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_RandomForestClassifier_trees100",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "trees200": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_RandomForestClassifier_trees200",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "trees500": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_RandomForestClassifier_trees500",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "GaussianProcessClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_GaussianProcessClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "LogisticRegression": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LogisticRegression",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "creg01": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_LogisticRegression_creg01",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "creg1": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_LogisticRegression_creg1",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "creg10": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_LogisticRegression_creg10",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "LogisticRegressionCV": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LogisticRegressionCV",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "PassiveAggressiveClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_PassiveAggressiveClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "Perceptron": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_Perceptron",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RidgeClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_RidgeClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "RidgeClassifierCV": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_RidgeClassifierCV",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "SGDClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_SGDClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "BernoulliNB": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_BernoulliNB",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "CategoricalNB": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_CategoricalNB",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "ComplementNB": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_ComplementNB",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "GaussianNB": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_GaussianNB",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MultinomialNB": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_MultinomialNB",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KNeighborsClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_KNeighborsClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "NearestCentroid": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_NearestCentroid",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "MLPClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_MLPClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "h100": {
+      "_weight": 0.5,
+      "_comment": "classifier_sklearn_MLPClassifier_h100",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "h200x100": {
+      "_weight": 0.5,
+      "_comment": "classifier_sklearn_MLPClassifier_h200x100",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "LabelPropagation": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LabelPropagation",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "LabelSpreading": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LabelSpreading",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "LinearSVC": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LinearSVC",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package",
+     "creg01": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_LinearSVC_creg01",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "creg1": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_LinearSVC_creg1",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     },
+     "creg10": {
+      "_weight": 0.333333,
+      "_comment": "classifier_sklearn_LinearSVC_creg10",
+      "_args": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32)"
+       }
+      ],
+      "_return": [
+       {
+        "type": "tuple",
+        "dtype": "(float32,int32,int32)"
+       }
+      ],
+      "_deterministic": true
+     }
+    },
+    "NuSVC": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_NuSVC",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "SVC": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_SVC",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "DecisionTreeClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_DecisionTreeClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "ExtraTreeClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.03125,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_ExtraTreeClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "KNeighborsClassifierN5": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_KNeighborsClassifierN5",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KNeighborsClassifierN10": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_KNeighborsClassifierN10",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "KNeighborsClassifierN25": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_KNeighborsClassifierN25",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LogisticRegressionCreg01": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LogisticRegressionCreg01",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LogisticRegressionCreg1": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LogisticRegressionCreg1",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "LogisticRegressionCreg10": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.007812,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_LogisticRegressionCreg10",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "MLPClassifierH100": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_MLPClassifierH100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "MLPClassifierH200x100": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_MLPClassifierH200x100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "RandomForestClassifierT100": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_RandomForestClassifierT100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "RandomForestClassifierT300": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_RandomForestClassifierT300",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "ExtraTreesClassifierT100": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_ExtraTreesClassifierT100",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    },
+    "ExtraTreesClassifierT300": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.010417,
+     "_deterministic": true,
+     "_comment": "classifier_sklearn_ExtraTreesClassifierT300",
+     "_seed_provenance": "variant upgrade 2026-07-19 (her minimal-requirements ruling)"
+    }
+   },
+   "xgboost": {
+    "_weight": 0.16514283332111526,
+    "_deterministic": true,
+    "_seed_provenance": "package share 47766503 of 289243572 30-day downloads (census project xgboost)",
+    "XGBClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.5,
+     "_deterministic": true,
+     "_comment": "classifier_xgboost_XGBClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    },
+    "XGBRFClassifier": {
+     "_args": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32)"
+      }
+     ],
+     "_return": [
+      {
+       "type": "tuple",
+       "dtype": "(float32,int32,int32)"
+      }
+     ],
+     "_weight": 0.5,
+     "_deterministic": true,
+     "_comment": "classifier_xgboost_XGBRFClassifier",
+     "_seed_provenance": "lazy big registry 2026-07-18: leaf materialized by estimator_lazy (default parameters, whitelist-gated); weights are conditionals - package share from the PyPI 30-day census, uniform across classes within a package"
+    }
+   }
+  },
+  "anomalyDetector": {
+   "_weight": 0.3,
+   "basic": {
+    "_args": [
+     {
+      "type": "numpy.ndarray",
+      "dtype": "float32"
+     }
+    ],
+    "_return": [
+     {
+      "type": "tuple",
+      "dtype": "(float32,float32)"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "_comment": "anomalyDetector_basic"
+   },
+   "oneClassSVM": {
+    "_args": [
+     {
+      "type": "numpy.ndarray",
+      "dtype": "float32"
+     }
+    ],
+    "_return": [
+     {
+      "type": "tuple",
+      "dtype": "(float32,float32)"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "_comment": "anomalyDetector_oneClassSVM"
+   }
+  },
+  "labeler": {
+   "_args": [
+    {
+     "type": "numpy.ndarray",
+     "dtype": "float32"
+    }
+   ],
+   "_weight": 0.3,
+   "_deterministic": true,
+   "disasterTweets": {
+    "_args": [
+     {
+      "type": "numpy.ndarray",
+      "dtype": "float32"
+     }
+    ],
+    "_return": [
+     {
+      "type": "tuple",
+      "dtype": "(float32,int32)"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "_comment": "labeler_disasterTweets",
+    "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+   },
+   "movieSentiment": {
+    "_args": [
+     {
+      "type": "numpy.ndarray",
+      "dtype": "float32"
+     }
+    ],
+    "_return": [
+     {
+      "type": "tuple",
+      "dtype": "(float32,int32)"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "_comment": "labeler_movieSentiment",
+    "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+   },
+   "movieSentimentFewshot": {
+    "_args": [
+     {
+      "type": "numpy.ndarray",
+      "dtype": "float32"
+     }
+    ],
+    "_return": [
+     {
+      "type": "tuple",
+      "dtype": "(float32,int32)"
+     }
+    ],
+    "_weight": 0.3,
+    "_deterministic": true,
+    "_comment": "labeler_movieSentimentFewshot",
+    "_seed_provenance": "shared-scenario port 2026-07-16: parts added to run the LLM world's five-want catalog (llm_market/gcon_market.py default_wants); weight 0.3 = the tree's default newcomer weight, existing weights untouched."
+   }
+  }
+ }
+}
