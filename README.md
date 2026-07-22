@@ -5,6 +5,8 @@ Code, configurations, and analysis instruments for the paper
 Division of Labor in Coevolutionary Societies" (CSSSA 2026) and its
 ODD companion document.
 
+Agent Based Learning Systems — https://agentbasedlearningsystems.com
+
 ## Layout
 
 - `simulation/` — the evolutionary-substrate engine (SnetSim): agents
