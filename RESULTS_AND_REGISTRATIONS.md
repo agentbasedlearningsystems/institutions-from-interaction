@@ -399,3 +399,39 @@ and lifetime statistics are always labeled "lifetime."
 (what the census counts); a *delivery* is one settled sale; a
 *payment* is one ledger transfer. "Trades" in earlier tables means
 professions.
+
+## Public run names (fixed July 24; all charts and tables)
+
+| public | cohort seed |
+|---|---|
+| run1 | solo_seed200 |
+| run2 | solo_seed201 |
+| run3 | solo_seed202 |
+| run4 | alwayson_seed210 |
+| run5 | alwayson_seed211 |
+| run6 | alwayson_seed212 |
+| run7 | alwayson_seed213 |
+| run8 | alwayson_seed214 |
+| run9 | alwayson_seed215 |
+| run10 | basic_seed216 |
+| run11 | basic_seed217 |
+| run12 | basic_seed218 |
+| run13 | basic_seed219 |
+| run14 | basic_seed220 |
+| run15 | basic_seed221 |
+| run16 | basic_seed222 |
+| run17 | basic_seed223 |
+| run18 | basic_seed224 |
+| run19 | basic_seed225 |
+| run20 | basic_seed226 |
+| run21 | basic_seed227 |
+| run22 | basic_seed228 |
+| run23 | basic_seed229 |
+| run24 | basic_seed230 |
+| run25 | basic_seed231 |
+| run26 | basic_seed232 |
+| run27 | basic_seed233 |
+| run28 | basic_seed234 |
+| run29 | basic_seed235 |
+| run30 | basic_seed236 |
+| run31 | basic_seed237 |
