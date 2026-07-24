@@ -382,3 +382,20 @@ Converged junk (same window, 25 societies measured): entry-tier
 median 6.5% of settlements, upper tiers median 0%. The remaining
 societies' converged windows are still filling; instrument:
 `instruments/converged_division.py`, `instruments/converged_junk.py`.
+
+## Measurement standard (July 24, standing for all future reads)
+
+**The standing state** of a society is its last one hundred settled
+deliveries, and every descriptive instrument reads inside that span:
+the profession census (distinct professions and their practitioners),
+junk decomposition, the contested-roles count, employment (payments
+within the span), and sign informativeness (boards covering the span).
+Delivery-mass windows make societies of different speeds comparable.
+Two fixed exceptions: reconstruction fidelity reads keep their
+last-five-iterations census (set before any daughter data existed),
+and lifetime statistics are always labeled "lifetime."
+
+**Terminology**: a *profession* is a distinct kind of work practiced
+(what the census counts); a *delivery* is one settled sale; a
+*payment* is one ledger transfer. "Trades" in earlier tables means
+professions.
