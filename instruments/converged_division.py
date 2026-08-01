@@ -57,7 +57,13 @@ for wdir in sorted(glob.glob(os.path.join(root, 'bigtree_*_seed2[0-9][0-9]'))):
     rows_buf = rows_buf[-100:]
     for t, a, ch in rows_buf:
         n_rows += 1
-        for bare in set(CHAIN.findall(ch)):
+        # sorted(): a set of strings iterates in per-process hash order,
+        # and the primary-trade pick below breaks frequency ties by first
+        # encounter, so without a fixed order the census returned different
+        # counts on different runs (12 of 31 societies moved between two
+        # seeds; 48 of 76 learners have a tied top tool). Results computed
+        # before 2026-08-01 used the unsorted form and are seed-dependent.
+        for bare in sorted(set(CHAIN.findall(ch))):
             if bare.startswith(TOOL):
                 per.setdefault(a, {}).setdefault(bare, 0)
                 per[a][bare] += 1
