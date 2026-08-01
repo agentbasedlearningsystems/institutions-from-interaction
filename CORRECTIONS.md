@@ -16,9 +16,11 @@ the first, produced by a response cache at temperature zero. The
 independent count was two, so the design supported at most p = 1/15,
 and the printed 1/35 was wrong at submission.
 
-Replication after submission settled the substance. Thirty independent
-coordinator-team runs measure the team arm at mean 0.6289 on the same
-nine-want measure, above the market arm's 0.5934. Every sentence
+Replication after submission settled the substance. Quality throughout
+these comparisons is the paper's own measure: the mean of the best
+verified score per want, taken over the nine wants that any run ever
+served. Thirty independent coordinator-team runs measure the team arm
+at mean 0.6289 on that measure, above the market arm's 0.5934. Every sentence
 comparing market societies to coordinator teams is therefore removed.
 The single-mind comparison stands: all four market societies scored
 above the single long-context mind (0.460 to 0.758 against 0.377), the
@@ -26,12 +28,18 @@ best at twice its score and twice its coverage.
 
 ## 2. The profession census is re-derived (Section 4, abstract, Figure 1)
 
-The census instrument broke frequency ties in interpreter hash order,
-so repeated runs returned different counts (see the reproducibility
-note in the README and the one-line fix in
-`instruments/converged_division.py`). Under the deterministic
-instrument: seventeen censusable societies, eleven to twenty distinct
-trades per society, evenness 0.91 to 0.98. The submitted reading of a
+The census instrument counts each learner's most frequent settled
+delivery as its trade. When two tools tied for most frequent, the
+instrument broke the tie in whatever order the interpreter's hash seed
+happened to impose, so repeated runs returned different counts. A
+one-line change, sorting the tied set before the pick, makes the
+instrument deterministic: every run now returns the same counts (see
+the reproducibility note in the README and
+`instruments/converged_division.py`). Re-derived with the fixed
+instrument, over the seventeen societies old enough to census, meaning
+their last hundred settled deliveries all fall inside a converged
+window: eleven to twenty distinct trades per society, evenness 0.91 to
+0.98. The submitted reading of a
 perfect division, twenty-three trades over twenty-three learners at
 evenness 1.00, does not reproduce; the widest verified division is
 twenty trades over twenty-three learners at evenness 0.98. Figure 1 is
@@ -40,10 +48,12 @@ rebuilt from the deterministic output.
 ## 3. The abstract's transmission probability is removed
 
 The submitted abstract attached "(exact one-sided p = 1/70)" to the
-reconstruction claim. That probability belongs to the panel's complete
-unanimous-split test, which the body does not report; the body reports
-first reads and a registered confirmation wave (exact rank-sum
-p = 1/126). The parenthetical is removed until the panel completes.
+reconstruction claim. That probability belongs to the panel's complete test, the one that
+asks whether every one of the eight seeded daughters ends nearer its
+own source society than the other source, a split that has probability
+1/70 by chance. The body does not report that test; it reports first
+reads of the panel and a confirmation wave, a second pre-registered
+batch of daughters and controls, at exact rank-sum p = 1/126. The parenthetical is removed until the panel completes.
 
 ## 4. Sign informativeness range
 
