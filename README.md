@@ -64,3 +64,14 @@ Analyses, run against a directory of experiment outputs:
 
 Full run outputs (reports, boards, transcripts; tens of gigabytes) are
 not in this repository and are available on request.
+
+
+## Reproducibility note, 1 August 2026
+
+The profession census (`instruments/converged_division.py`) previously
+iterated a Python set, so tied tools resolved in per-process hash order
+and the census could return different counts on different runs. It is
+now deterministic (`sorted(...)`, one line). Counts computed before this
+date are seed-dependent and should be re-derived; under the fixed
+instrument the censusable societies read 11 to 20 distinct trades at
+evenness 0.91 to 0.98, identical across every seed tested.
