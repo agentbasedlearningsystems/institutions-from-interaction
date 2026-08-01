@@ -1,3 +1,10 @@
+> **Correction notice, 1 August 2026.** The submitted paper contained
+> errors found in an internal recomputation of every figure. See
+> [CORRECTIONS.md](CORRECTIONS.md) for the full list, and `paper/` for
+> the submitted and corrected versions side by side. The largest
+> correction: the market-versus-coordinator-team comparison counted a
+> cache replay as an independent run and is withdrawn.
+
 # Institutions from Interaction — code and reproduction kit
 
 Code, configurations, and analysis instruments for the paper
