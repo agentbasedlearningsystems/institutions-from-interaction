@@ -19,9 +19,15 @@ and the printed 1/35 was wrong at submission.
 Replication after submission settled the substance. Quality throughout
 these comparisons is the paper's own measure: the mean of the best
 verified score per want, taken over the nine wants that any run ever
-served. Thirty independent coordinator-team runs measure the team arm
-at mean 0.6289 on that measure, above the market arm's 0.5934. Every sentence
-comparing market societies to coordinator teams is therefore removed.
+served. With the replication wave complete, thirty-one independent
+coordinator-team runs (the twenty-four-run wave plus the seven earlier
+independent team runs) measure the team arm at mean 0.6299 on that
+measure, against the market arm's 0.5934 over its nine societies. A
+two-sided rank test finds no significant difference (Mann-Whitney
+p = 0.38; neither one-sided direction reaches significance, p = 0.82
+and p = 0.19). On delivered quality the two arms are a statistical
+tie. Every sentence comparing market societies to coordinator teams is
+therefore removed.
 The single-mind comparison stands: all four market societies scored
 above the single long-context mind (0.460 to 0.758 against 0.377), the
 best at twice its score and twice its coverage.
