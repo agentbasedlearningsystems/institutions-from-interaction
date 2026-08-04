@@ -1,17 +1,9 @@
-> **Correction notice, updated 4 August 2026.** The originally
-> submitted paper contained errors that an internal recomputation of
-> every reported figure found after submission; the paper was
-> RESUBMITTED in corrected form, and the resubmitted version of record
-> incorporates the corrections listed in
-> [CORRECTIONS.md](CORRECTIONS.md). The original submission is kept as
-> [paper/CSS2026_paper_78_as_submitted.pdf](paper/CSS2026_paper_78_as_submitted.pdf)
-> for comparison. The newest corrected build,
+> **Note.** The version of record is the resubmitted paper of
+> 4 August 2026. The build kept here,
 > [paper/CSS2026_paper_78_corrected.pdf](paper/CSS2026_paper_78_corrected.pdf),
-> additionally carries four same-day polish edits made after the
-> resubmission upload (listed at the end of the corrections file). The
-> largest correction: the market-versus-coordinator-team comparison
-> counted a cache replay as an independent run and is withdrawn; the
-> completed replication reads as a statistical tie.
+> additionally carries four small polish edits made after the
+> resubmission upload; they are listed in
+> [CORRECTIONS.md](CORRECTIONS.md).
 
 # Institutions from Interaction — code and reproduction kit
 
