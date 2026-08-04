@@ -51,15 +51,27 @@ evenness 1.00, does not reproduce; the widest verified division is
 twenty trades over twenty-three learners at evenness 0.98. Figure 1 is
 rebuilt from the deterministic output.
 
-## 3. The abstract's transmission probability is removed
+## 3. The complete-panel transmission claim is removed from abstract and body
 
 The submitted abstract attached "(exact one-sided p = 1/70)" to the
-reconstruction claim. That probability belongs to the panel's complete test, the one that
-asks whether every one of the eight seeded daughters ends nearer its
-own source society than the other source, a split that has probability
-1/70 by chance. The body does not report that test; it reports first
-reads of the panel and a confirmation wave, a second pre-registered
-batch of daughters and controls, at exact rank-sum p = 1/126. The parenthetical is removed until the panel completes.
+reconstruction claim, and the submitted body asserted the result
+outright ("all eight seeded daughters sit nearer their own source
+than the other"). That probability belongs to the panel's complete
+test, the one that asks whether every one of the eight seeded
+daughters ends nearer its own source society than the other source, a
+split that has probability 1/70 by chance. The registered read of
+that complete test has not been taken. The corrected version removes
+the result claim from the abstract and the body both. What the body
+keeps is supported: the registered design (stated with its 1/70
+success criterion, as registration), the first reads of the panel,
+and a confirmation wave, a second pre-registered batch of daughters
+and controls, at exact rank-sum p = 1/126. The complete-panel result
+will be claimed only when its registered read is taken.
+
+(Amended 4 August: the first version of this note said the submitted
+body did not report the complete test. It did, and the first
+corrected build retained it; both are now removed, and the corrected
+PDF is rebuilt.)
 
 ## 4. Sign informativeness range
 
