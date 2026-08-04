@@ -1,9 +1,8 @@
 > **Note.** The version of record is the resubmitted paper of
-> 4 August 2026. The build kept here,
+> 1 August 2026. The build kept here,
 > [paper/CSS2026_paper_78_corrected.pdf](paper/CSS2026_paper_78_corrected.pdf),
-> additionally carries four small polish edits made after the
-> resubmission upload; they are listed in
-> [CORRECTIONS.md](CORRECTIONS.md).
+> additionally carries five small polish edits made on 4 August;
+> they are listed in [CORRECTIONS.md](CORRECTIONS.md).
 
 # Institutions from Interaction — code and reproduction kit
 
