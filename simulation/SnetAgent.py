@@ -1387,7 +1387,17 @@ class SnetAgent(Agent, ABC):
 
         name = function_name
         if name in self.model.emergent_functions:
-            emergent_root = self.model.emergent_functions[name][0]
+            chain = self.model.emergent_functions[name]
+            if not chain:
+                # Marked-empty chain (unresolvable placeholder, the
+                # 2026-05-21 graceful-failure convention): no root to
+                # descend into. Return the name unchanged, like any
+                # non-emergent token; the offer dies at the
+                # `if itemlist:` guards, never here. Unguarded, this
+                # IndexError killed every run at its first such query
+                # (the cache-frontier deaths, closed 2026-08-04).
+                return name
+            emergent_root = chain[0]
             if call_depth < self.p["recursive_trade_depth_limit"]:
                 name = self.convert_to_cumulative_category(emergent_root, call_depth = call_depth+1)
         return name
