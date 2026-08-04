@@ -4,11 +4,13 @@ The version of record as submitted is `paper/CSS2026_paper_78_as_submitted.pdf`.
 The corrected version is `paper/CSS2026_paper_78_corrected.pdf`. The
 corrections came from an internal audit that recomputed every reported
 figure from the raw run records. They are listed here so a reader can
-check each one. The submission window closed before the corrected
-build could replace the portal copy, so a reviewer reading the
-submitted PDF should read this list beside it: every item below names
-what the submitted paper says, why it is wrong, and what the
-corrected version says instead.
+check each one. The paper was resubmitted in corrected form on 4
+August: the resubmitted version of record incorporates every
+correction below. The original submission is kept for comparison, and
+every item below names what it said, why that was wrong, and what the
+corrected version says instead. Four small polish edits postdate the
+resubmission upload and are listed at the end of this file; the
+newest corrected build here carries them.
 
 ## 1. The arms comparison is withdrawn (Section 10, abstract, conclusion)
 
@@ -104,3 +106,29 @@ Results that reproduce exactly and are unchanged: the hidden-capability
 experiment in all three arms, the wholesale-supplier result and its
 out-of-sample replication, the solitary-control comparison, the
 settlement-order result, and the employment range.
+
+## Post-resubmission polish (4 August; in the newest build here, not in the version of record)
+
+The resubmitted version of record incorporates corrections 1 through
+6 above, including the removal of the complete-panel claim from both
+the abstract and the body. Four small edits were made later the same
+day, after the resubmission upload; they are in
+`paper/CSS2026_paper_78_corrected.pdf` and not in the portal copy:
+
+1. The limitations section's census count. The version of record
+   still says eleven societies met the census bar, a sentence left
+   from before the re-derivation, while its own Section 4 and
+   Figure 1 carry the corrected seventeen. This is an internal
+   inconsistency, not a wrong result: seventeen is the correct count,
+   stated correctly everywhere else in the same paper.
+2. The abstract's credit for the reconstruction finding now reads
+   "Reconstruction experiments show" rather than "A reconstruction
+   panel shows", since the supporting evidence is the first reads and
+   the confirmation wave rather than the complete panel, whose
+   registered read is still pending.
+3. The mixed-capability passage now states explicitly that its
+   societies field eleven agents rather than the standard twelve.
+4. The census sentence now reads "twenty distinct trades over the
+   twenty-three of its twenty-four learners that reached a censusable
+   practice", separating the designed population from the
+   practitioners.
