@@ -71,7 +71,12 @@ will be claimed only when its registered read is taken.
 (Amended 4 August: the first version of this note said the submitted
 body did not report the complete test. It did, and the first
 corrected build retained it; both are now removed, and the corrected
-PDF is rebuilt.)
+PDF is rebuilt. Same-day second amendment: the abstract's opening of
+the reconstruction claim now credits "reconstruction experiments"
+rather than "a reconstruction panel", since the supported evidence is
+the first reads and the confirmation wave, not the complete panel;
+and a stale census count in the limitations section, eleven, is
+corrected to the seventeen of the re-derivation.)
 
 ## 4. Sign informativeness range
 
