@@ -4,7 +4,11 @@ The version of record as submitted is `paper/CSS2026_paper_78_as_submitted.pdf`.
 The corrected version is `paper/CSS2026_paper_78_corrected.pdf`. The
 corrections came from an internal audit that recomputed every reported
 figure from the raw run records. They are listed here so a reader can
-check each one.
+check each one. The submission window closed before the corrected
+build could replace the portal copy, so a reviewer reading the
+submitted PDF should read this list beside it: every item below names
+what the submitted paper says, why it is wrong, and what the
+corrected version says instead.
 
 ## 1. The arms comparison is withdrawn (Section 10, abstract, conclusion)
 
