@@ -23,3 +23,26 @@ carries five small polish edits made on 4 August:
    twenty-three of its twenty-four learners that reached a censusable
    practice", separating the designed population from the
    practitioners.
+
+## The sign measurements, anchored (5 August)
+
+The sign-informativeness figure in Section 7 (0.69 to 1.05 bits,
+median 0.74) equals its estimator's computed noise floor (0.73 to
+1.06 bits, median 0.76, on shuffled labels), so it attributes no
+categorical meaning to the displayed signs: no measurable association
+links a sign to what its bearer sells, and the family category enters
+no choice anywhere in the mechanism. What the signs demonstrably
+carry is relational, and it is the meaning that matters to outcomes:
+settings-variants of one algorithm display closer signs than
+unrelated same-role algorithms in thirteen of twenty-seven testable
+societies, with effects of +0.003 to +0.035 cosine (median +0.015)
+at per-society permutation p of 0.001 to 0.003 and pooled exact
+binomial p of 1.3e-10; the result is well powered, every negative
+society having effectively one hundred percent power to detect the
+median positive effect. These small cosine differences are exactly
+the scale the simulation's chooser amplifies: offers are examined
+with probability proportional to similarity minus the field's
+minimum, so a relational edge of +0.015 against noise near 0.001
+becomes a large difference in who is chosen for examination. The
+newest build's Section 7 states all of this in place of the earlier
+informativeness sentence.
